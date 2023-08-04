@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href='/static/index.css' />
+  </head>
+<body>
+    <form action="{{ url_for('predict')}}"method="post">
+    <center>
+	<h3>Fill the form below to check if you have heart disease or not! </h3>
+	<form action = "/predict" method = "POST">
+	<br>
+    <h4>Age </h4>
+	<input type = "text" name = "age" id="age" placeholder = "Enter Age" required = "required"/>
+	<br><br>
+
+    <h4>Gender:  </h4>
+	<input type = "radio" name = "sex" value = "0" id = "sex" >Female</input>
+	<input type = "radio" name = "sex" value = "1" id = "sex"> Male</input>
+    </h4>
+    <br><br>
+	<h4>Chest Pain Type:  </h4>
+	<h4>
+	<input type = "radio" name = "cp" value = "0" id = "cp" > asymptomatic </input>
+	<input type = "radio" name = "cp" value = "1" id = "cp"> typical angina </input>
+	<input type = "radio" name = "cp" value = "2" id = "cp">atypical angina </input>
+	<input type = "radio" name = "cp" value = "3" id = "cp"> non-anginal pain </input>
+	</h4>
+	<br>
+
+    <h4>Resting blood Sugar  </h4>
+	<input type = "text" name = "BP" placeholder = "unit" required = "required"/>
+	<br><br>
+    <h4>Serum Cholestoral </h4>
+	<input type = "text" name = "CH" placeholder = "Enter cholestrol" required = "required"/>
+	<br><br>
+    <h4>Fasting Blood Sugar</h4>
+	<input type = "radio" name = "fbs" value = "0" checked id = "fbs" >Less than equal to 120 mg/dl  </input>
+    <br>
+	<input type = "radio" name = "fbs" value = "1" id = "fbs"> Greater than 120 mg/dl</input>
+	<br><br>
+
+    <h4>Resting ECG Result  </h4>
+	<input type = "radio" name = "restecg" value = "0" id = "restecg" >  LV Hypertrophy</input>
+    <br>
+	<input type = "radio" name = "restecg" value = "1" id = "restecg">  Normal</input>
+    <br>
+	<input type = "radio" name = "restecg" value = "2" id = "restecg ">  ST-T wave Abnormality</input>
+    <br><br>
+
+    <h4>Maximum Heart Rate Acheived</h4>
+    <input type = "text" name = "thalachh" placeholder = "" required = "required">
+	<br><br>
+
+    <h4>Exercise Induced Angina</h4>
+    <input type = "radio" name = "exang" value = "1" id = "exang"> Yes</input>
+	<input type = "radio" name = "exang" value = "0" id = "exang" > No </input>
+    <br><br>
+    <h4>Old Peak</h4>
+    <input type = "text" name = "oldpeak" placeholder = "" required = "required">
+	<br><br>
+
+    <h4>Slope</h4>
+    <input type = "radio" name = "slope" value = "0" id = "exang">downsloping</input>
+	<input type = "radio" name = "slope" value = "1" id = "exang" >flat </input>
+    <input type = "radio" name = "slope" value = "2" id = "exang">upsloping</input>
+	<br><br>
+
+    <h4>CA:Number of major vessels coloured by flourosopy</h4>
+	<input type = "radio" name = "ca" value = "0" id = "ca" > 0</input>
+	<input type = "radio" name = "ca" value = "1" id = "ca"> 1</input>
+    <input type = "radio" name = "ca" value = "2" id = "ca" > 2 </input>
+	<input type = "radio" name = "ca" value = "3" id = "ca">3</input>
+    <br><br>
+
+    <h4>Thallium</h4>
+	<input type = "radio" name = "thall" value = "1" id = "thal"> Fixed Defect</input>
+    <input type = "radio" name = "thall" value = "2" id = "thal">  Normal </input>
+    <input type = "radio" name = "thall" value = "3" id = "thal" > Reversable defect</input>
+    <br><br>
+    
+    <button class="button-3" role="button">Predict</button>
+	<br>	
+    <h2><button class="button-3">{{ prediction_text}}</button></h2>
+	<!-- <h2> <button> {{ prediction_text}} </button></h2> -->
+    </center>
+	</form>
+</body>
+</html>
