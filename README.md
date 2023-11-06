@@ -1,3 +1,7 @@
 # Heartify
 
-The prediction of in-hospital mortality for intensive care units (ICU)-admitted HF patients remain poorly characterized. We aimed to develop and validate a prediction model for all-cause in-hospital mortality among ICU-admitted HF patients.Various ML algorithms implemented on a data set of heart attacks from kaggle in jupyter notebook using python, results are analysed and compared of various models.
+Web App that aims to help users assess their risk of experiencing a heart attack based on various input parameters like Chest Pain Type, 
+Resting Blood Sugar.<br>
+• Leveraged Machine Learning Algorithms such as KNN, Decision Tree, Naive Bayes, and Logistic Regression to identify the most accurate 
+model for predicting heart attacks.<br>
+• Tech Stack: Python, Machine Learning, Flask, HTML/CSS, sklear <br>
